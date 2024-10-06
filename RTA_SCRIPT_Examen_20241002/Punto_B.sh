@@ -49,5 +49,7 @@ for i in {1..10}; do
 done
 
 echo"monto forma persiste las carpetas del punto A"
-echo "/dev/sdc &HOME/Punto_A ext4 defaults 0 0" | sudo tee -a
+sudo echo "/dev/sdc &HOME/Punto_A ext4 defaults 0 0" | sudo tee -a /etc/fstab
+
+sudo mount -a
 
