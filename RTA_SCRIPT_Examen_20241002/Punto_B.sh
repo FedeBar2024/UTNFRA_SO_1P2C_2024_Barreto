@@ -48,8 +48,8 @@ for i in {1..10}; do
     sudo mkfs.ext4 /dev/sdc$i
 done
 
-echo"monto forma persiste las carpetas del punto A"
-sudo echo "/dev/sdc &HOME/Punto_A ext4 defaults 0 0" | sudo tee -a /etc/fstab
+echo "monto forma persiste las carpetas del punto A"
+echo "/dev/sdc $HOME/Punto_A ext4 defaults 0 0" | sudo tee -a /etc/fstab
 
 sudo mount -a
 
